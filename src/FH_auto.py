@@ -269,20 +269,24 @@ def shiftUp():
     global last_shift_time, last_upshift_time
 
     # shift up by press e
+if use_pxn_shifter:
+    pygame.event.pump()
+    if joy.get_button(5):  # right paddle
+        print("PXN: Shift UP")
+else:
     keyboard.press_and_release("e")
-    # update the last shifting times
-    last_shift_time = time.time()
-    last_upshift_time = time.time()
 
 
 def shiftDown():
     global last_shift_time, last_downshift_time
 
     # shift down by press q
+if use_pxn_shifter:
+    pygame.event.pump()
+    if joy.get_button(4):  # left paddle
+        print("PXN: Shift DOWN")
+else:
     keyboard.press_and_release("q")
-    # update the last shifting times
-    last_shift_time = time.time()
-    last_downshift_time = time.time()
 
 
 # to change the drive mode during drive
