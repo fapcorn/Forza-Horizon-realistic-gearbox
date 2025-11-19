@@ -1,3 +1,19 @@
+import pygame
+
+pygame.init()
+pygame.joystick.init()
+
+use_pxn_shifter = False  # will auto-enable if PXN wheel is detected
+
+if pygame.joystick.get_count() > 0:
+    joy = pygame.joystick.Joystick(0)
+    joy.init()
+    print("Detected controller:", joy.get_name())
+    use_pxn_shifter = True
+else:
+    print("No controller detected, using keyboard Q/E instead.")
+
+
 # 2024/5/9 v2.3 updated with custom tkinter
 # By GinoLin980
 import sys; sys.dont_write_bytecode = True # prevent the generation of .pyc files
