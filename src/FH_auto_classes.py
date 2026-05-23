@@ -34,8 +34,8 @@ class Gearbox():
         # Virtual controller
         self.gamepad = vg.VX360Gamepad()
 
-        self.UPSHIFT_BUTTON = vg.XUSB_BUTTON.XUSB_GAMEPAD_RIGHT_SHOULDER
-        self.DOWNSHIFT_BUTTON = vg.XUSB_BUTTON.XUSB_GAMEPAD_LEFT_SHOULDER
+        self.UPSHIFT_BUTTON = vg.XUSB_BUTTON.XUSB_GAMEPAD_B
+        self.DOWNSHIFT_BUTTON = vg.XUSB_BUTTON.XUSB_GAMEPAD_X
 
         self.SHIFT_PRESS_TIME = 0.03
 
